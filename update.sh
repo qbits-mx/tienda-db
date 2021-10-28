@@ -1,5 +1,6 @@
+BASE=/var/lib/mysql/tienda-db
 DATE=`date +%Y-%m-%d`
-FILE=/var/lib/mysql/tienda-db/database_$DATE.sql
+FILE=$BASE/database_$DATE.sql
 mysqldump -u garellano -pgarellano petstore > $FILE
-cp $FILE database_current.sql
+cp $FILE $BASE/database_current.sql
 
